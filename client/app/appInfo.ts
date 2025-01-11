@@ -37,6 +37,6 @@ export const APP_INFO = {
       url: 'https://sejinoh.site',
     },
   ],
-  url: 'https://breezi.vercel.app',
+  url: 'https://breezi.sejinoh.site',
   google_site_verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
 }

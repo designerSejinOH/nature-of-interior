@@ -2,7 +2,7 @@
 
 ### Breezi | 풍수지리 AI와 방 꾸미기를 쉽고 재미있게
 
-#### [🔗 breezi.vercel.app](https://breezi.vercel.app)
+#### [🔗 breezi.sejinoh.site](https://breezi.sejinoh.site)
 
 ## Introduction
 
