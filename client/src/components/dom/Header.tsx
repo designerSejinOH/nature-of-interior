@@ -5,17 +5,15 @@ export const Header = () => {
   const router = useRouter()
 
   return (
-    <div className='fixed z-10 top-0 left-0 w-full h-fit flex flex-row justify-between items-start'>
-      <div className='flex w-fit h-fit flex-col justify-start items-start pl-4 py-2 cursor-pointer'>
-        <div
-          onClick={() => router.push('/')}
-          className='text-4xl w-fit h-fit text-nowrap flex flex-row gap-1 font-bold md:hover:opacity-60 active:opacity-60 active:scale-95 transition-all duration-200 ease-in-out'
-        >
-          Breezi 1.0
-        </div>
-        <div className='w-fit h-fit -mt-1 flex flex-row gap-1 justify-center items-center'>
-          <span className='text-lg '>풍수지리 AI와 방 꾸미기를 쉽고 재미있게</span>
-        </div>
+    <div className=' w-full h-fit  flex flex-col justify-center items-center'>
+      <div
+        onClick={() => router.refresh()}
+        className='text-2xl w-full h-fit text-nowrap px-2 pt-1 flex flex-row md:hover:opacity-60 active:opacity-60 active:scale-95 transition-all duration-200 ease-in-out'
+      >
+        Breezi 1.0
+      </div>
+      <div className='w-full h-fit flex flex-row gap-1 px-2 pb-2 justify-start items-center'>
+        <span className='text-xs '>풍수지리 AI와 방 꾸미기를 쉽고 재미있게</span>
       </div>
     </div>
   )

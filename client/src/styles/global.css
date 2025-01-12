@@ -2,57 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'establishRetrosansOTF';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRetrosansOTF.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NotoSans', sans-serif;
-  src: url('/fonts/NotoSansKR-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NotoSans', sans-serif;
-  src: url('/fonts/NotoSansKR-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NotoSans', sans-serif;
-  src: url('/fonts/NotoSansKR-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NotoSerif', serif;
-  src: url('/fonts/NotoSerifKR-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NotoSerif', serif;
-  src: url('/fonts/NotoSerifKR-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NotoSerif', serif;
-  src: url('/fonts/NotoSerifKR-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-
 @layer base {
   * {
+    -webkit-touch-callout: none;
+  }
+
+  *::before {
     box-sizing: border-box;
   }
 
@@ -60,14 +15,6 @@
     white-space: pre-wrap;
   }
 
-  :root {
-    --sat: env(safe-area-inset-top);
-    --sar: env(safe-area-inset-right);
-    --sab: env(safe-area-inset-bottom);
-    --sal: env(safe-area-inset-left);
-  }
-
-  input,
   textarea {
     appearance: none;
     -webkit-appearance: none;
@@ -102,7 +49,8 @@
   html,
   body {
     margin: 0;
-    padding: 0;
+    padding:
+      env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     /* 16px */
     font-size: 100%;
     background-color: #fff;

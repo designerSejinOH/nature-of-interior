@@ -4,6 +4,7 @@ import { APP_INFO } from './appInfo'
 import localFont from 'next/font/local'
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import '@/styles/global.css'
+import { Toaster } from 'react-hot-toast'
 
 export const metadata: Metadata = {
   alternates: {
@@ -105,7 +106,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={`${pretendard.className}`}>
-        <Layout>{children}</Layout>
+        <Layout>
+          <Toaster position='top-center' />
+          {children}
+        </Layout>
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
       </body>

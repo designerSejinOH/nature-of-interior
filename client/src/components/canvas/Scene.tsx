@@ -10,9 +10,24 @@ export default function Scene({ ...props }) {
   return (
     <Canvas
       {...props}
+      flat
+      camera={{ fov: 18, position: [20, 20, 20] }}
       shadows
-      gl={{ antialias: false }}
-      camera={{ position: [0, 0, 5], fov: 50 }}
+      gl={{
+        alpha: true,
+        antialias: true,
+      }}
+      raycaster={{
+        params: {
+          Line: { threshold: 0.1 },
+          Mesh: undefined,
+          LOD: undefined,
+          Points: {
+            threshold: 0,
+          },
+          Sprite: undefined,
+        },
+      }}
       onCreated={(state) => (state.gl.toneMapping = THREE.AgXToneMapping)}
     >
       {/* @ts-ignore */}
